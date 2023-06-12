@@ -1,2 +1,2 @@
-# anime-search-interface
+# Anime search - interface
 Interface for using anime search engine API
