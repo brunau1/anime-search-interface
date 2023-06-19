@@ -44,7 +44,7 @@ function SearchBox({ onSearch }) {
         <option value="tfidf">TF-IDF</option>
       </select>
 
-      <button type="submit" style={{ marginLeft: '15px' }}>Buscar</button>
+      <button type="submit" style={{ marginLeft: '15px' }}>Search</button>
     </form>
   );
 }
