@@ -32,6 +32,7 @@ function App() {
 
   return (
     <div style={{ width: "1000px" }}>
+      <p style={{ position: 'fixed' }}>Made with ❤ by brunau1</p>
       <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
         <img className="logo-img" src={logo} alt="logo" />
       </div>
