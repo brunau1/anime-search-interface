@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
 function SearchResults({ results }) {
   return (
-    <ul>
+    <div>
       {results.map((result, index) => (
-        <li key={index}>
-          <img src={result.imageUrl} alt={result.title} />
-          <h3>{result.title}</h3>
-          <p>{result.description}</p>
-        </li>
+        <div className="list-item" key={index}>
+          <img className="anime-img" src={result.imageUrl} alt={result.title} />
+          <div>
+            <h3>{result.title}</h3>
+            <p>{result.synopsis}</p>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 

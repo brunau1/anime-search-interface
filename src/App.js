@@ -1,25 +1,45 @@
 import React, { useState } from "react";
 import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
+import logo from "./logo.png";
 import "./Styles.css";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = (searchText) => {
-    // Aqui você deve fazer a chamada para a API de busca e atualizar os resultados
-    // Substitua a URL pela correta de acordo com o serviço que você estiver utilizando
-    fetch(`https://api.example.com/search?text=${searchText}`)
+  const handleSearch = (searchText, embeddingMethod, limit) => {
+    const route = "http://localhost:5000/search?";
+
+    const params = new URLSearchParams({
+      text: searchText,
+      limit: limit,
+      embedding: embeddingMethod,
+    });
+
+    const url = route + params.toString();
+
+    console.log("Searching... ", url);
+
+    fetch(url)
       .then((response) => response.json())
-      .then((data) => setSearchResults(data.results))
+      .then((data) => {
+        setSearchResults(data.ranking);
+
+        console.log(data);
+      })
       .catch((error) => console.log(error));
   };
 
   return (
-    <div>
-      <h1>Exemplo de Busca</h1>
-      <SearchBox onSearch={handleSearch} />
-      <SearchResults results={searchResults} />
+    <div style={{ width: "1000px" }}>
+      <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
+        <img className="logo-img" src={logo} alt="logo" />
+      </div>
+      <div>
+        <h3>Enter the field values...</h3>
+        <SearchBox onSearch={handleSearch} />
+        <SearchResults results={searchResults} />
+      </div>
     </div>
   );
 }
