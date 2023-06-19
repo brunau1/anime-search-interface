@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
-import logo from "./logo.png";
+import logo from "./images/logo.png";
 import "./Styles.css";
 
 function App() {
