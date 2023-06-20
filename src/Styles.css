@@ -1,8 +1,8 @@
 /* Estilos para o componente App */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #202124;
-    color: #e8e8e8;
+    background-color: #ededed;
+    color: #202124;
     padding: 20px;
     display: flex;
     justify-content: center;

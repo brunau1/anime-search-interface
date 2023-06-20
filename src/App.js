@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div style={{ width: "1000px" }}>
-      <p style={{ position: 'fixed' }}>Made with ❤ by <a style={{color: "white"}} href="https://github.com/brunau1">brunau1</a></p>
+      {/* <p style={{ position: 'fixed' }}>Made with ❤ by <a style={{color: "black"}} href="https://github.com/brunau1">brunau1</a></p> */}
       <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
         <img className="logo-img" src={logo} alt="logo" />
       </div>
